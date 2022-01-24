@@ -1,0 +1,146 @@
+/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
+html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+button, input, select {
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+img, video {
+  height: auto;
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td, th {
+  padding: 0;
+}
+
+@font-face {
+  font-family: "Montserrat NORM";
+  src: url(../../font/Montserrat-Regular.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url(../../font/GT-Ultra-Standard-Bold-Trial.woff2) format("woff2");
+}
+body {
+  background-color: #060447;
+  font-family: "Montserrat";
+  color: #fff38a;
+  overflow: hidden;
+}
+
+main {
+  max-width: 1280px;
+  margin: auto;
+  margin-top: 140px;
+  padding: 0 24px;
+}
+main .top {
+  display: flex;
+}
+main .top .left {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+}
+main .top .left .logos {
+  width: 80px;
+  margin-bottom: 24px;
+}
+main .top .left .titles {
+  margin-bottom: 8px;
+}
+main .top .left .titles h1 {
+  font-size: 40px;
+  line-height: 49px;
+}
+main .top .left .descriptions {
+  margin-bottom: auto;
+  max-width: 422px;
+}
+main .top .left .descriptions p {
+  font-family: "Montserrat NORM";
+  line-height: 30px;
+  font-size: 20px;
+}
+main .top .left .years {
+  font-size: 200px;
+}
+main .top .right {
+  flex: 1;
+}
+main .top .right .pictures {
+  aspect-ratio: 2/3;
+  position: relative;
+}
+main .top .right .pictures .image {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.bottom {
+  position: relative;
+  top: 84px;
+  display: flex;
+  align-items: center;
+}
+.bottom .arrows {
+  display: flex;
+}
+.bottom .arrows img {
+  width: 22px;
+}
+.bottom .arr-left, .bottom arr-right {
+  display: inline-block;
+}
+.bottom .arr-left {
+  transform: scaleX(-1);
+  margin-right: 40px;
+  opacity: 0.5;
+}
+.bottom .stepper {
+  display: flex;
+  justify-content: space-between;
+}
+.bottom .stepper li {
+  position: relative;
+  background-color: #fff38a;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+/*# sourceMappingURL=style.css.map */
