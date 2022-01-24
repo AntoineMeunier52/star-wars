@@ -83,6 +83,7 @@ main{
 }
 
 .bottom{
+	max-width: 1280px;
 	position: relative;
 	top: 84px;
 	display: flex;
@@ -108,15 +109,21 @@ main{
 	}
 
 	.stepper{
+		width: 100%;
+		padding-left: 100px;
 		display: flex;
 		justify-content: space-between;
 
 		li{
 			position: relative;
-			background-color: $text-color;
+			background-color: #827B68;
 			width: 32px;
 			height: 32px;
 			border-radius: 50%;
+		}
+
+		.activ{
+			background-color: #fff38a;
 		}
 	}
 }
