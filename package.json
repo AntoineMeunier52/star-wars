@@ -1,11 +1,19 @@
 {
-  "name": "star_wars",
+  "name": "star-wars",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AntoineMeunier52/star-wars.git"
+  },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AntoineMeunier52/star-wars/issues"
+  },
+  "homepage": "https://github.com/AntoineMeunier52/star-wars#readme"
 }

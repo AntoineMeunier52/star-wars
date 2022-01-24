@@ -55,7 +55,6 @@ body {
   background-color: #060447;
   font-family: "Montserrat";
   color: #fff38a;
-  overflow: hidden;
 }
 
 main {
@@ -116,6 +115,7 @@ main .top .right .pictures .image {
   top: 84px;
   display: flex;
   align-items: center;
+  padding-bottom: 50px;
 }
 .bottom .arrows {
   display: flex;

@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "workspaceWeb",
+			"path": "../../.."
+		},
+		{
+			"name": "dart-sass",
+			"path": "../../../../../Downloads/dart-sass"
+		}
+	],
+	"settings": {}
+}

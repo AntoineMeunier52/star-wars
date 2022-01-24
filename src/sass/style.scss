@@ -16,7 +16,6 @@ body{
 	background-color: #060447;
 	font-family: "Montserrat";
 	color: $text-color;
-	overflow: hidden;
 }
 
 main{
@@ -88,6 +87,7 @@ main{
 	top: 84px;
 	display: flex;
 	align-items: center;
+	padding-bottom: 50px;
 
 	.arrows{
 		display: flex;
