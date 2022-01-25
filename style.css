@@ -132,21 +132,33 @@ main .top .right .pictures .image {
   margin-right: 40px;
   opacity: 0.5;
 }
-.bottom .stepper {
-  width: 100%;
-  padding-left: 100px;
+.bottom ul {
   display: flex;
   justify-content: space-between;
+  flex-grow: 1;
 }
-.bottom .stepper li {
+.bottom ul li {
   position: relative;
-  background-color: #827B68;
+  flex-grow: 1;
+}
+.bottom ul li .line:before, .bottom ul li .line:after {
+  content: "";
+  position: absolute;
+  background-color: #fff38a;
+  width: 168px;
+  height: 1px;
+  opacity: 0.3;
+  right: 0;
+}
+.bottom ul li:after {
+  content: "";
+  right: 0;
+  position: absolute;
+  background: #fff38a;
   width: 32px;
   height: 32px;
   border-radius: 50%;
-}
-.bottom .stepper .activ {
-  background-color: #fff38a;
+  transform: translate(0, -50%);
 }
 
 /*# sourceMappingURL=style.css.map */
