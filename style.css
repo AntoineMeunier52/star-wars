@@ -60,7 +60,7 @@ body {
 main {
   max-width: 1280px;
   margin: auto;
-  margin-top: 140px;
+  margin-top: 3vh;
   padding: 0 24px;
 }
 main .top {
@@ -198,6 +198,7 @@ main .top .right .pictures .image {
   width: 32px;
   height: 32px;
   border-radius: 50%;
+  opacity: 0.3;
   transform: translate(0, -50%);
   opacity: 0.5;
 }
@@ -209,6 +210,9 @@ main .top .right .pictures .image {
 }
 .bottom ul li:first-child::before {
   content: none;
+}
+.bottom ul.activ {
+  opacity: 1;
 }
 
 /*# sourceMappingURL=style.css.map */
