@@ -60,7 +60,7 @@ body {
 main {
   max-width: 1280px;
   margin: auto;
-  margin-top: 3vh;
+  margin-top: 100px;
   padding: 0 24px;
 }
 main .top {
@@ -73,7 +73,9 @@ main .top .left {
 }
 main .top .left .logos {
   position: relative;
+  left: 0;
   width: 80px;
+  height: 80px;
   margin-bottom: 24px;
 }
 main .top .left .logos img {
@@ -93,29 +95,40 @@ main .top .left .logos img.old {
 main .top .left .titles {
   margin-bottom: 8px;
   position: relative;
+  height: 49px;
 }
 main .top .left .titles h1 {
-  display: none;
-}
-main .top .left .titles h1.activ {
   display: block;
   font-size: 40px;
   line-height: 49px;
+  position: absolute;
+  left: 0;
+  opacity: 1;
+  transform: translate(0, 0);
+  transition: transform 1s ease, opacity 1s ease;
+}
+main .top .left .titles h1:not(.activ) {
+  opacity: 0;
+  transform: translate(100%, 0);
+}
+main .top .left .titles h1.old {
+  opacity: 0;
+  transform: translate(-100%, 0);
 }
 main .top .left .descriptions {
   margin-bottom: auto;
-  max-width: 422px;
   position: relative;
 }
 main .top .left .descriptions p {
+  max-width: 422px;
   display: block;
   font-family: "Montserrat NORM";
   line-height: 30px;
   font-size: 20px;
-  position: absolute;
   opacity: 1;
   transform: translate(0, 0);
   transition: transform 1s ease, opacity 1s ease;
+  position: absolute;
   left: 0;
 }
 main .top .left .descriptions p:not(.activ) {
@@ -133,16 +146,25 @@ main .top .right {
   flex: 1;
 }
 main .top .right .pictures {
+  overflow: hidden;
   aspect-ratio: 2/3;
   position: relative;
 }
-main .top .right .pictures .image {
+main .top .right .pictures #picture {
   width: 100%;
   height: 100%;
   background-size: cover;
   position: absolute;
   top: 0;
   left: 0;
+  transform: translate(0, 0);
+  transition: transform 1s ease;
+}
+main .top .right .pictures #picture:not(.activ) {
+  transform: translate(101%, 0);
+}
+main .top .right .pictures #picture.old {
+  transform: translate(-100%, 0);
 }
 
 .bottom {
@@ -165,6 +187,9 @@ main .top .right .pictures .image {
   transform: scaleX(-1);
   margin-right: 40px;
   opacity: 0.5;
+}
+.bottom .arr-left.activ {
+  opacity: 1;
 }
 .bottom ul {
   display: flex;
