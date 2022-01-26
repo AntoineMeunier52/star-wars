@@ -5,7 +5,6 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="style.css">
-	<script src="index.js"></script>
 	<title>Document</title>
 </head>
 <body>
@@ -13,14 +12,24 @@
 		<section class="top">
 			<div class="left">
 				<div class="logos">
-					<img src="assets/first_logo.png">
+					<img class="activ" src="assets/first_logo.png">
+					<img src="assets/second_logo.png">
+					<img src="assets/third_logo.png">
 				</div>
 				<div class="titles">
-					<h1>Un nouvel espoir</h1>
+					<h1 class="activ">Un nouvel espoir</h1>
+					<h1 class="new">L'empire contre-attaque</h1>
+					<h1>Le retour du Jedi</h1>
 				</div>
 				<div class="descriptions">
-					<p>
+					<p class="activ">
 						C'est le premier opus de la saga Star Wars par sa date de sortie, mais le quatrième selon l'ordre chronologique de l'histoire.
+					</p>
+					<p class="new">
+						La guerre entre le maléfique Empire galactique et son antagoniste, l'Alliance rebelle, bat son plein.
+					</p>
+					<p>
+						Le maléfique Empire galactique construit une nouvelle station spatiale Étoile de la mort pour anéantir définitivement l'Alliance rebelle.
 					</p>
 				</div>
 				<div class="years">
@@ -29,7 +38,9 @@
 			</div>
 			<div class="right">
 				<div class="pictures">
-					<div class="image" style="background-image: url(assets/st1.png);"></div>
+					<div class="image activ" style="background-image: url(assets/st1.png);"></div>
+					<div class="image new" style="background-image: url(assets/st2.png);"></div>
+					<div class="image" style="background-image: url(assets/st3.png);"></div>
 				</div>
 			</div>
 		</section>
@@ -59,5 +70,6 @@
 			</ul>
 		</nav>
 	</main>
+	<script src="src/js/index.js"></script>
 </body>
 </html>

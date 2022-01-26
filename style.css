@@ -72,24 +72,59 @@ main .top .left {
   flex-direction: column;
 }
 main .top .left .logos {
+  position: relative;
   width: 80px;
   margin-bottom: 24px;
 }
+main .top .left .logos img {
+  transform: translate(0, 0);
+  position: absolute;
+  opacity: 1;
+  transition: transform 1s ease, opacity 1s ease;
+}
+main .top .left .logos img:not(.activ) {
+  opacity: 0;
+  transform: translate(100%, 0);
+}
+main .top .left .logos img.old {
+  opacity: 0;
+  transform: translate(-100%, 0);
+}
 main .top .left .titles {
   margin-bottom: 8px;
+  position: relative;
 }
 main .top .left .titles h1 {
+  display: none;
+}
+main .top .left .titles h1.activ {
+  display: block;
   font-size: 40px;
   line-height: 49px;
 }
 main .top .left .descriptions {
   margin-bottom: auto;
   max-width: 422px;
+  position: relative;
 }
 main .top .left .descriptions p {
+  display: block;
   font-family: "Montserrat NORM";
   line-height: 30px;
   font-size: 20px;
+  position: absolute;
+  opacity: 1;
+  transform: translate(0, 0);
+  transition: transform 1s ease, opacity 1s ease;
+  left: 0;
+}
+main .top .left .descriptions p:not(.activ) {
+  opacity: 0;
+  transform: translate(100%, 0);
+}
+main .top .left .descriptions p.old {
+  opacity: 0;
+  transform: translate(-100%, 0);
 }
 main .top .left .years {
   font-size: 200px;
@@ -111,7 +146,6 @@ main .top .right .pictures .image {
 }
 
 .bottom {
-  max-width: 1280px;
   position: relative;
   top: 84px;
   display: flex;
@@ -145,10 +179,16 @@ main .top .right .pictures .image {
   content: "";
   position: absolute;
   background-color: #fff38a;
-  width: 168px;
-  height: 1px;
+  height: 2px;
+  right: 32px;
+  left: 0;
   opacity: 0.3;
-  right: 0;
+}
+.bottom ul li .line:after {
+  opacity: 1;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 1s ease-out;
 }
 .bottom ul li:after {
   content: "";
@@ -159,6 +199,16 @@ main .top .right .pictures .image {
   height: 32px;
   border-radius: 50%;
   transform: translate(0, -50%);
+  opacity: 0.5;
+}
+.bottom ul li.activ .line:after {
+  transform: scaleX(1);
+}
+.bottom ul li.activ:after {
+  opacity: 1;
+}
+.bottom ul li:first-child::before {
+  content: none;
 }
 
 /*# sourceMappingURL=style.css.map */

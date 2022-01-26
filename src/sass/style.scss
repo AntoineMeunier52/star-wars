@@ -33,28 +33,71 @@ main{
 			flex-direction: column;
 	
 			.logos{
+				position: relative;
 				width: 80px;
 				margin-bottom: 24px;
+				
+				img{
+					transform: translate(0, 0);
+					position: absolute;
+					opacity: 1;
+					transition: transform 1s ease, opacity 1s ease;
+
+					&:not(.activ){
+						opacity: 0;
+						transform: translate(100%, 0);
+					}
+					&.old{
+						opacity: 0;
+						transform: translate(-100%, 0);
+					}
+				}
+
+
 			}
 	
 			.titles{
-				margin-bottom: 8px;			
+				margin-bottom: 8px;
+				position: relative;		
 	
 				h1{
-					font-size: 40px;
-					line-height: 49px;
+					display: none;
+					&.activ{
+						display: block	;
+						font-size: 40px;
+						line-height: 49px;
+					}
 				}
 			}
 	
 			.descriptions{
 				margin-bottom: auto;
 				max-width: 422px;
+				position: relative;
 	
 				p{
-					font-family: "Montserrat NORM";
-					line-height: 30px;
-					font-size: 20px;
+						display: block;
+						font-family: "Montserrat NORM";
+						line-height: 30px;
+						font-size: 20px;
+						position: absolute;
+
+						opacity: 1;
+						transform: translate(0, 0);
+						transition: transform 1s ease, opacity 1s ease;
+						left: 0;
+
+						&:not(.activ) {
+							opacity: 0;
+							transform: translate(100%, 0);
+						}
+
+						&.old{
+							opacity: 0;
+							transform: translate(-100%, 0);
+						}
 				}
+
 			}
 	
 			.years{
@@ -83,7 +126,6 @@ main{
 }
 
 .bottom{
-	max-width: 1280px;
 	position: relative;
 	top: 84px;
 	display: flex;
@@ -122,10 +164,17 @@ main{
 					content: "";
 					position: absolute;
 					background-color: #fff38a;
-					width: 168px;
-					height: 1px;
+					height: 2px;
+					right: 32px;
+					left: 0;
 					opacity: .3;
-					right: 0;
+				}
+
+				&:after {
+					opacity: 1;
+					transform: scaleX(0);
+					transform-origin: left;
+					transition: transform 1s ease-out;
 				}
 			}
 
@@ -138,11 +187,25 @@ main{
 				height: 32px;
 				border-radius: 50%;
 				transform: translate(0, -50%);
+				opacity: 0.5;
 			}	
 
-			// &.activ{
-			// 	background-color: #fff38a;
-			// }
+			&.activ{
+			 	.line{
+					 &:after{
+						 transform: scaleX(1);
+					 }
+				 }
+				 &:after{
+					 opacity: 1;
+				 }
+			}
+
+			&:first-child{
+				&::before{
+					content: none;
+				}
+			}
 
 		}
 
