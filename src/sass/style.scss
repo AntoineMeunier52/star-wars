@@ -21,7 +21,7 @@ body{
 main{
 	max-width: 1280px;
 	margin: auto;
-	margin-top: 140px;
+	margin-top: 3vh;
 	padding: 0 24px;
 
 	.top{
@@ -83,7 +83,6 @@ main{
 }
 
 .bottom{
-	max-width: 1280px;
 	position: relative;
 	top: 84px;
 	display: flex;
@@ -121,11 +120,11 @@ main{
 				&:before, &:after{
 					content: "";
 					position: absolute;
-					background-color: #fff38a;
-					width: 168px;
+					background-color: #827B68;
 					height: 1px;
 					opacity: .3;
-					right: 0;
+					right: 32px;
+					left: 0;
 				}
 			}
 
@@ -137,14 +136,14 @@ main{
 				width: 32px;
 				height: 32px;
 				border-radius: 50%;
+				opacity: .3;
 				transform: translate(0, -50%);
 			}	
-
-			// &.activ{
-			// 	background-color: #fff38a;
-			// }
-
 		}
+		&.activ{
+			 opacity: 1;
+		}
+
 
 	}
 }
